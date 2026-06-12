@@ -69,8 +69,8 @@
 }
 
 .edoCard {
-  background: #fff;
-  border: 1px solid #edf1f7;
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 12px;
   padding: clamp(8px, 1.5cqw, 12px);
   display: flex;
@@ -201,16 +201,15 @@
 }
 
 .edoSmallCard {
-  background: #fff;
-  border: 1px solid #edf1f7;
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 10px;
   padding: clamp(8px, 1.2cqw, 12px);
   box-sizing: border-box;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: clamp(4px, 1cqw, 6px);
+  flex-direction: row;
+  align-items: center;
+  gap: clamp(8px, 1.5cqw, 12px);
   min-width: 0;
   min-height: 0;
   height: 100%;
@@ -218,14 +217,12 @@
   box-shadow: 0 1px 0 rgba(15, 23, 42, 0.02);
 }
 
-.edoSmallCardHeader {
+.edoSmallTextWrapper {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: clamp(6px, 1.2cqw, 8px);
-  flex: 0 0 auto;
+  gap: 2px;
   min-width: 0;
-  width: 100%;
+  flex: 1;
 }
 
 .edoSmallIcon {
@@ -246,7 +243,7 @@
 
 .edoSmallValue {
   flex-shrink: 0;
-  margin-top: auto;
+  margin-top: 0;
   font-size: clamp(16px, 3cqw, 18px);
   font-weight: 700;
   color: #0f172a;

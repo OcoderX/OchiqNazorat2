@@ -70,3 +70,31 @@
   border-color: #007bff;
   box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
 }
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .adminPanel {
+    padding: 16px;
+  }
+
+  .searchInput {
+    max-width: 100%;
+  }
+
+  .createBtn {
+    width: 100%;
+    text-align: center;
+  }
+}
+

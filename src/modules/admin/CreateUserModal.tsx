@@ -104,12 +104,7 @@ export function CreateUserModal({ onClose, onCreateUser, onError }: Props) {
     }
   }
 
-  const handleRoleChange = (roleId: string, checked: boolean) => {
-    setFormData((prev) => ({
-      ...prev,
-      role_ids: checked ? [...prev.role_ids, roleId] : prev.role_ids.filter((id) => id !== roleId),
-    }))
-  }
+
 
   return (
     <div className={styles.modalOverlay} onClick={onClose}>

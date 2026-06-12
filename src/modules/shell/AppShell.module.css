@@ -107,8 +107,16 @@
   overflow-x: clip;
 }
 
-.content[data-collapsed] {
-  grid-template-columns: 0fr minmax(0, 1fr);
+@media (min-width: 961px) {
+  .content[data-collapsed] {
+    grid-template-columns: 72px minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 960px) {
+  .content[data-collapsed] {
+    grid-template-columns: 0fr minmax(0, 1fr);
+  }
 }
 
 /* Ekran kengligi breakpointni kesganda: grid va sidebar CSS qoidalari bir vaqtda almashadi — transition “cho‘zilish”ni oldini olish */

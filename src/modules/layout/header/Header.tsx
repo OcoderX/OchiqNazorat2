@@ -114,6 +114,14 @@ export function Header({ onMenuToggle, menuOpen, compactMobileTray = false }: Pr
           />
           <span className={styles.burgerLine} />
         </button>
+
+        <div className={styles.searchContainer}>
+          <input type="text" placeholder="Search" className={styles.searchInput} />
+          <svg className={styles.searchIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+        </div>
       </div>
 
       <div className={styles.right}>
@@ -164,6 +172,7 @@ export function Header({ onMenuToggle, menuOpen, compactMobileTray = false }: Pr
                 </div>
               ) : null}
             </div>
+            {langBlock}
           </div>
         </div>
 

@@ -1,4 +1,4 @@
-/* d-header: bg-bars, h-14; kontent o‘ng chet-i RightRail bilan bir qatorda (wrapper grid) */
+/* d-header: transparent background, h-14; content right edge aligned with RightRail */
 .header {
   grid-area: header;
   height: var(--do-header-h, 64px);
@@ -9,11 +9,53 @@
   justify-content: flex-start;
   gap: 16px;
   padding: 8px 20px 8px 12px;
-  background: var(--do-bars-bg);
-  backdrop-filter: blur(22px) saturate(1.15);
-  -webkit-backdrop-filter: blur(22px) saturate(1.15);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  background: transparent;
+  backdrop-filter: blur(12px) saturate(1.1);
+  -webkit-backdrop-filter: blur(12px) saturate(1.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   color: #fff;
+}
+
+.searchContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: 8px;
+}
+
+.searchInput {
+  width: clamp(160px, 20vw, 320px);
+  height: 36px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 0 40px 0 16px;
+  color: #fff;
+  font-family: inherit;
+  font-size: 13px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.searchInput::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.searchInput:focus {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.05);
+}
+
+.searchIcon {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  color: rgba(255, 255, 255, 0.48);
+  pointer-events: none;
 }
 .header,
 .header * {

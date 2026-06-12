@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { startTransition, useEffect, useState } from 'react'
 import styles from './AdminPanel.module.css'
 import { AdminUsersTable } from './AdminUsersTable'
 import { CreateUserModal } from './CreateUserModal'
@@ -18,23 +18,31 @@ export function AdminPanel() {
   const [selectedUser, setSelectedUser] = useState<User | null>(null)
   const [searchQuery, setSearchQuery] = useState('')
 
+  const loadUsers = async () => {
+    try {
+      startTransition(() => {
+        setLoading(true)
+        setError(null)
+      })
+      const response = await usersApiClient.getUsers(1, 100)
+      startTransition(() => {
+        setUsers(response.data)
+      })
+    } catch (err) {
+      startTransition(() => {
+        setError(err instanceof Error ? err.message : 'Ошибка загрузки пользователей')
+      })
+      console.error('Failed to load users:', err)
+    } finally {
+      startTransition(() => {
+        setLoading(false)
+      })
+    }
+  }
+
   useEffect(() => {
     loadUsers()
   }, [])
-
-  const loadUsers = async () => {
-    try {
-      setLoading(true)
-      setError(null)
-      const response = await usersApiClient.getUsers(1, 100)
-      setUsers(response.data)
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'Ошибка загрузки пользователей')
-      console.error('Failed to load users:', err)
-    } finally {
-      setLoading(false)
-    }
-  }
 
   const filteredUsers = users.filter(
     (user) =>

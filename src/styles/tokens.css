@@ -15,8 +15,8 @@
   --do-bars-bg: rgba(255, 255, 255, 0.1);
   --do-light-sky-40: rgba(0, 163, 255, 0.4);
 
-  /* Ilova orqa foni — public/images/blue-background.png */
-  --do-app-bg-image: url(/images/blue-background.png);
+  /* Ilova orqa foni — public/images/login-bg.png */
+  --do-app-bg-image: url(/images/login-bg.png);
   --do-bg-scrim: rgba(8, 14, 32, 0.26);
 
   /* Chap panel — shaffof shisha (fon orqasidan ko’rinadi) */
@@ -34,7 +34,7 @@
   --do-workspace-min-width: var(--do-dashboard-card-width);
 
   --do-font:
-    ‘Inter’, system-ui, -apple-system, ‘Segoe UI’, Roboto, ‘SF Pro Display’,
-    ‘SF Pro Display Regular’, sans-serif;
+    'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'SF Pro Display',
+    'SF Pro Display Regular', sans-serif;
 }
 

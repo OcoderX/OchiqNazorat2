@@ -53,7 +53,7 @@ export function EdoUsageStatusCard() {
               <div className={`${styles.edoIconBox} ${styles.edoIconPurple}`}>
                 <Users size={28} />
               </div>
-              <div className={styles.edoCardTitle}>Фойдаланувчилар</div>
+              <div className={styles.edoCardTitle}>Фойдаланаётган ташкилотлар</div>
             </div>
             <div className={styles.edoValueRow}>
               <div className={styles.edoCardValue}>9 000</div>
@@ -76,37 +76,33 @@ export function EdoUsageStatusCard() {
 
         <div className={styles.edoSmallGrid}>
           <div className={styles.edoSmallCard}>
-            <div className={styles.edoSmallCardHeader}>
-              <div className={`${styles.edoIconBox} ${styles.edoIconRed} ${styles.edoSmallIcon}`}>
-                <Building size={28} />
-              </div>
+            <div className={`${styles.edoIconBox} ${styles.edoIconRed} ${styles.edoSmallIcon}`}>
+              <Building size={28} />
+            </div>
+            <div className={styles.edoSmallTextWrapper}>
               <div className={styles.edoSmallLabel}>Фойдаланмаётган ташкилотлар</div>
+              <div className={styles.edoSmallValue}>80 000</div>
             </div>
-            <div className={styles.edoSmallValue}>80 000</div>
           </div>
 
           <div className={styles.edoSmallCard}>
-            <div className={styles.edoSmallCardHeader}>
-              <div
-                className={`${styles.edoIconBox} ${styles.edoIconOrange} ${styles.edoSmallIcon}`}
-              >
-                <Briefcase size={28} />
-              </div>
+            <div className={`${styles.edoIconBox} ${styles.edoIconOrange} ${styles.edoSmallIcon}`}>
+              <Briefcase size={28} />
+            </div>
+            <div className={styles.edoSmallTextWrapper}>
               <div className={styles.edoSmallLabel}>Шартнома тузиб тизимдан фойдаланмаётганлар</div>
+              <div className={styles.edoSmallValue}>80 000</div>
             </div>
-            <div className={styles.edoSmallValue}>80 000</div>
           </div>
 
           <div className={styles.edoSmallCard}>
-            <div className={styles.edoSmallCardHeader}>
-              <div
-                className={`${styles.edoIconBox} ${styles.edoIconIndigo} ${styles.edoSmallIcon}`}
-              >
-                <Building2 size={28} />
-              </div>
-              <div className={styles.edoSmallLabel}>Тизимдан фойдаланиб шартнома тузмаганлар</div>
+            <div className={`${styles.edoIconBox} ${styles.edoIconIndigo} ${styles.edoSmallIcon}`}>
+              <Building2 size={28} />
             </div>
-            <div className={styles.edoSmallValue}>80 000</div>
+            <div className={styles.edoSmallTextWrapper}>
+              <div className={styles.edoSmallLabel}>Тизимдан фойдаланиб шартнома тузмаганлар</div>
+              <div className={styles.edoSmallValue}>80 000</div>
+            </div>
           </div>
         </div>
       </div>

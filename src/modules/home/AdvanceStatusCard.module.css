@@ -120,17 +120,16 @@
   text-align: center;
   pointer-events: none;
   padding: 0 clamp(4px, 1.5cqw, 8px);
-  max-width: 88%;
+  max-width: 95%;
   box-sizing: border-box;
 }
 
 .donutLabel {
   max-width: 100%;
-  font-size: var(--hd-mode-advance-donut-label-fs, clamp(13px, 2.5cqw, 17px));
+  font-size: var(--hd-mode-advance-donut-label-fs, clamp(10px, 2.2cqw, 13px));
   font-weight: 500;
   color: #64748b;
   line-height: 1.25;
-  overflow-wrap: anywhere;
 }
 
 .donutValue {

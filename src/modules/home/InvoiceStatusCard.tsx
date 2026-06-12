@@ -1,6 +1,6 @@
 'use client'
 
-import { Calendar, ChevronDown, Component, ExternalLink, FileText } from 'lucide-react'
+import { Calendar, ChevronDown, Theater, ExternalLink, FileText } from 'lucide-react'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import {
   Bar,
@@ -16,7 +16,7 @@ import {
 import type { TooltipContentProps, XAxisTickContentProps } from 'recharts'
 import { DASHBOARD_CARDS } from './dashboard-mode'
 import { DashboardScopeDropdown } from './DashboardScopeDropdown'
-import { REGIONS_MOCK } from './home-dashboard-new.mock'
+import { INVOICE_REGIONS_MOCK } from './home-dashboard-new.mock'
 import shared from './styles/shared/card-base.module.css'
 import styles from './InvoiceStatusCard.module.css'
 
@@ -39,7 +39,7 @@ const CHART_SERIES = [
   },
   {
     id: 'total-issued',
-    value: 1326,
+    value: 17200,
     label: '1 326',
     fill: 'url(#invoiceRed)',
   },
@@ -179,7 +179,7 @@ export function InvoiceStatusCard() {
       <div className={`${shared.cardContent} ${styles.invoiceContent}`}>
         <div className={styles.invoiceSummary}>
           <div className={styles.invoiceIconWrapper}>
-            <Component size={32} className={styles.invoiceIcon} />
+            <Theater size={32} className={styles.invoiceIcon} />
           </div>
           <div className={styles.invoiceValue}>1 594</div>
           <div className={styles.invoiceLabel}>
@@ -246,17 +246,17 @@ export function InvoiceStatusCard() {
             Ёмон кўрсаткичли ҳудудлар
           </div>
           <div className={styles.invoiceRegionsList}>
-            {REGIONS_MOCK.map((region) => (
-              <div key={region.name} className={`${shared.listItem} ${styles.invoiceListItem}`}>
-              <span className={styles.invoiceRegionName}>{region.name}</span>
-              <div className={styles.invoiceRegionStat}>
-                <span className={styles.invoiceRegionIcon}>
-                  <FileText size={13} strokeWidth={2.5} />
-                </span>
-                <span>{formatCount(region.count1)}</span>
+            {INVOICE_REGIONS_MOCK.map((region, index) => (
+              <div key={`${region.name}-${index}`} className={`${shared.listItem} ${styles.invoiceListItem}`}>
+                <span className={styles.invoiceRegionName}>{region.name}</span>
+                <div className={styles.invoiceRegionStat}>
+                  <span className={styles.invoiceRegionIcon}>
+                    <FileText size={13} strokeWidth={2.5} />
+                  </span>
+                  <span>{formatCount(region.count)}</span>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
           </div>
         </div>
       </div>

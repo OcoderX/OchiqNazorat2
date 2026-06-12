@@ -4,7 +4,7 @@ import { Calendar, ChevronDown, ExternalLink, FileText } from 'lucide-react'
 import { Cell, Pie, PieChart, ResponsiveContainer } from 'recharts'
 import { DASHBOARD_CARDS } from './dashboard-mode'
 import { DashboardScopeDropdown } from './DashboardScopeDropdown'
-import { ADVANCE_CHART_MOCK, REGIONS_MOCK } from './home-dashboard-new.mock'
+import { ADVANCE_CHART_MOCK, ADVANCE_REGIONS_MOCK } from './home-dashboard-new.mock'
 import shared from './styles/shared/card-base.module.css'
 import styles from './AdvanceStatusCard.module.css'
 
@@ -103,7 +103,7 @@ export function AdvanceStatusCard() {
             Ёмон кўрсаткичли ҳудудлар
           </div>
           <div className={styles.advanceRegionsList}>
-            {REGIONS_MOCK.map((region) => (
+            {ADVANCE_REGIONS_MOCK.map((region) => (
               <div key={region.name} className={`${shared.listItem} ${styles.advanceRegionCard}`}>
                 <div className={styles.advanceRegionName}>{region.name}</div>
                 <div className={styles.advanceRegionFooter}>
@@ -111,7 +111,7 @@ export function AdvanceStatusCard() {
                     <span className={`${styles.advanceLegendIcon} ${styles.advanceLegendIconRed}`}>
                       <FileText size={13} strokeWidth={2.5} />
                     </span>
-                    <span>{formatCount(region.count1)}</span>
+                    <span>{formatCount(region.count)}</span>
                   </div>
                   <div className={`${shared.itemPercentage} ${styles.advanceItemPercentage}`}>
                     {region.percentage}%

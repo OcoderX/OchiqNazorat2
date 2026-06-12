@@ -150,6 +150,14 @@ export function Sidebar({ collapsed, layoutTransition = true }: Props) {
               height={28}
               decoding="async"
             />
+            <img
+              src="/images/white_logo.svg"
+              alt="Ochiq nazorat"
+              className={styles.brandLogoCollapsed}
+              width={32}
+              height={32}
+              decoding="async"
+            />
           </Link>
         </div>
 

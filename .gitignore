@@ -15,7 +15,10 @@ lerna-debug.log*
 # Claude Code
 .claude/
 .claude/**
-
+.agents
+*.md
+# Ignore all markdown files except code_quality_analysis.md
+code_quality_analysis.md
 # pnpm
 pnpm-workspace.yaml
 .pnpm-store

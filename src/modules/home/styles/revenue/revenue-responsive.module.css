@@ -652,8 +652,8 @@
 }
 
 .regionCard {
-  background: #fff;
-  border: var(--hd-region-border);
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: var(--hd-region-radius);
   width: 100%;
   min-height: var(--hd-region-card-h);

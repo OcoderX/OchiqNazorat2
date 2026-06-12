@@ -48,9 +48,9 @@ export function DashboardScopeDropdown({
           <div className={`${shared.dropdownItem} ${shared.dropdownItemActive}`}>
             Барчаси <Check size={16} color="#0ea5e9" />
           </div>
-          <div className={shared.dropdownItem}>Э-Ҳуқуқшунос</div>
+          <div className={shared.dropdownItem}>Э. Ҳуқуқшунос</div>
           <div className={shared.dropdownItem}>Рақамли маҳалла</div>
-          <div className={shared.dropdownItem}>Токен</div>
+          <div className={shared.dropdownItem}>Тскон</div>
           <button
             type="button"
             className={`${shared.dropdownItem} ${shared.dropdownToggle}`}
