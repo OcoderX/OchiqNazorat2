@@ -24,7 +24,7 @@
 @container revenue-card (min-width: 480px) {
   @media (min-height: 640px) {
     .revenueCard {
-      min-height: 320px !important;
+      min-height: 400px !important;
       max-height: 100% !important;
       --hd-card-pad-active: 12px;
       padding: var(--hd-card-pad-active) !important;
@@ -246,7 +246,10 @@
   position: relative;
   min-width: 0;
   width: var(--hd-mode-revenue-gauge-width, 100%);
-  max-width: min(var(--hd-mode-revenue-gauge-max-width, 100%), var(--hd-mode-revenue-gauge-cap, 100%));
+  max-width: min(
+    var(--hd-mode-revenue-gauge-max-width, 100%),
+    var(--hd-mode-revenue-gauge-cap, 100%)
+  );
   flex: var(--hd-mode-revenue-gauge-wrap-flex, 0 0 auto);
   align-self: var(--hd-mode-revenue-gauge-align-self, stretch);
   min-height: 108px;
@@ -323,8 +326,9 @@
 }
 
 .gaugeRowAmount .moneyIcon {
-  width: clamp(16px, 3.5cqi, 20px);
-  height: clamp(10px, 2.4cqi, 13px);
+  width: clamp(14px, 3cqi, 18px);
+  height: clamp(14px, 3cqi, 18px);
+  border-radius: 5px;
 }
 
 .iconBlue {
@@ -344,21 +348,22 @@
 }
 
 .moneyIcon {
-  display: inline-flex;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 3px;
-  width: 26px;
-  height: 17px;
-  border-radius: 999px;
+  gap: 2px;
+  width: 25px;
+  height: 25px;
+  border-radius: 6px;
   background: #0ea5e9;
   flex-shrink: 0;
 }
 
 .moneyIcon span {
-  width: 6px;
-  height: 10px;
-  border-radius: 999px;
+  width: 12px;
+  height: 3px;
+  border-radius: 1px;
   background: #fff;
 }
 
@@ -454,8 +459,9 @@
   }
 
   .summaryStatLine .moneyIconSm {
-    width: 15px;
-    height: 10px;
+    width: 14px;
+    height: 14px;
+    border-radius: 4px;
   }
 
   .pillGreen,
@@ -496,8 +502,9 @@
 }
 
 .summaryStatLine .moneyIconSm {
-  width: 18px;
-  height: 12px;
+  width: 16px;
+  height: 16px;
+  border-radius: 5px;
   flex-shrink: 0;
 }
 
@@ -532,20 +539,21 @@
 }
 
 .moneyIconSm {
-  display: inline-flex;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 2px;
-  width: 18px;
-  height: 12px;
-  border-radius: 999px;
+  width: 16px;
+  height: 16px;
+  border-radius: 5px;
   flex-shrink: 0;
 }
 
 .moneyIconSm span {
-  width: 4px;
-  height: 8px;
-  border-radius: 999px;
+  width: 8px;
+  height: 2px;
+  border-radius: 1px;
   background: #fff;
 }
 
@@ -723,15 +731,15 @@
 }
 
 .regionStatLine .moneyIconSm {
-  width: 14px;
-  height: 9px;
-  gap: 1px;
+  width: 13px;
+  height: 13px;
+  border-radius: 4px;
   flex-shrink: 0;
 }
 
 .regionStatLine .moneyIconSm span {
-  width: 3px;
-  height: 6px;
+  width: 6px;
+  height: 1.5px;
 }
 
 .regionStatLine .separator {

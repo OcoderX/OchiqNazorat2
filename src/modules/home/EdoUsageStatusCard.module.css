@@ -69,8 +69,8 @@
 }
 
 .edoCard {
-  background: rgba(255, 255, 255, 0.45);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
   border-radius: 12px;
   padding: clamp(8px, 1.5cqw, 12px);
   display: flex;
@@ -201,8 +201,8 @@
 }
 
 .edoSmallCard {
-  background: rgba(255, 255, 255, 0.45);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
   border-radius: 10px;
   padding: clamp(8px, 1.2cqw, 12px);
   box-sizing: border-box;

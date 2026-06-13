@@ -3,6 +3,7 @@
   min-height: 0;
   padding: var(--hd-card-pad);
   border-radius: var(--hd-card-radius);
+  background: #fff;
   overflow: visible;
 }
 
@@ -61,7 +62,10 @@
 
 .advanceContent {
   display: grid;
-  grid-template-columns: minmax(0, 1.9fr) minmax(var(--hd-region-sidebar-min, 178px), var(--hd-region-sidebar-max, 34%));
+  grid-template-columns: minmax(0, 1.9fr) minmax(
+      var(--hd-region-sidebar-min, 178px),
+      var(--hd-region-sidebar-max, 34%)
+    );
   grid-template-rows: minmax(0, 1fr);
   gap: clamp(6px, 1.2cqw, var(--hd-grid-gap));
   padding-top: 4px;
@@ -89,8 +93,14 @@
 }
 
 .advanceDonutWrap {
-  width: var(--hd-mode-advance-donut-w, var(--hd-mode-advance-donut-size, clamp(128px, 33cqw, 190px)));
-  height: var(--hd-mode-advance-donut-h, var(--hd-mode-advance-donut-size, clamp(128px, 33cqw, 190px)));
+  width: var(
+    --hd-mode-advance-donut-w,
+    var(--hd-mode-advance-donut-size, clamp(128px, 33cqw, 190px))
+  );
+  height: var(
+    --hd-mode-advance-donut-h,
+    var(--hd-mode-advance-donut-size, clamp(128px, 33cqw, 190px))
+  );
   min-width: 0;
   min-height: 0;
   max-width: min(var(--hd-mode-advance-donut-max, 100%), 100%);
@@ -317,7 +327,10 @@
     }
 
     .advanceContent {
-      grid-template-columns: minmax(0, 1fr) minmax(var(--hd-region-sidebar-min, 178px), var(--hd-region-sidebar-max, 34%));
+      grid-template-columns: minmax(0, 1fr) minmax(
+          var(--hd-region-sidebar-min, 178px),
+          var(--hd-region-sidebar-max, 34%)
+        );
       flex: var(--hd-mode-advance-content-flex, 1 1 0);
       min-height: 0;
       overflow: hidden;

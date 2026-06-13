@@ -3,6 +3,7 @@
   padding: var(--hd-card-pad);
   min-height: 0;
   border-radius: var(--hd-card-radius);
+  background: #fff;
   overflow: visible;
 }
 
@@ -231,7 +232,10 @@
 @container invoice-card (min-width: 480px) {
   @media (min-height: 640px) {
     .invoiceContent {
-      grid-template-columns: 118px minmax(0, 1fr) minmax(var(--hd-region-sidebar-min, 178px), var(--hd-region-sidebar-max, 34%)) !important;
+      grid-template-columns: 118px minmax(0, 1fr) minmax(
+          var(--hd-region-sidebar-min, 178px),
+          var(--hd-region-sidebar-max, 34%)
+        ) !important;
       grid-template-rows: minmax(0, 1fr) !important;
       align-items: stretch !important;
       gap: 10px !important;
@@ -334,7 +338,10 @@
 
   @media (min-height: 520px) {
     .invoiceContent {
-      grid-template-columns: 112px minmax(0, 1fr) minmax(var(--hd-region-sidebar-min, 178px), var(--hd-region-sidebar-max, 34%)) !important;
+      grid-template-columns: 112px minmax(0, 1fr) minmax(
+          var(--hd-region-sidebar-min, 178px),
+          var(--hd-region-sidebar-max, 34%)
+        ) !important;
       grid-template-rows: minmax(0, 1fr) !important;
       gap: 10px !important;
     }

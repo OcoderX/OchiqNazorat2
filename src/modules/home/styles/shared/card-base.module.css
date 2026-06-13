@@ -411,7 +411,7 @@
   @media (min-height: 640px) {
     .card {
       --hd-card-pad-active: 12px;
-      min-height: 320px !important;
+      min-height: 400px !important;
       max-height: 100% !important;
       padding: var(--hd-card-pad-active) !important;
       border-radius: 14px !important;

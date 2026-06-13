@@ -76,17 +76,6 @@ export function Header({ onMenuToggle, menuOpen, compactMobileTray = false }: Pr
     </div>
   )
 
-  const userBlock = (
-    <button
-      type="button"
-      className={styles.user}
-      onClick={() => setProfileMenuOpen((o) => !o)}
-    >
-      <HeaderUserAvatar className={styles.avatarImg} size={24} />
-      <span className={styles.userName}>{DEFAULT_SESSION_DISPLAY.displayName}</span>
-    </button>
-  )
-
   const langBlock = (
     <button type="button" className={styles.langChip} title="Til" aria-label="Til: Oʻzbek tili">
       <img src="/images/11.svg" alt="" width={20} height={14} className={styles.flag} />
@@ -96,7 +85,11 @@ export function Header({ onMenuToggle, menuOpen, compactMobileTray = false }: Pr
   )
 
   return (
-    <header className={styles.header} data-compact-tray={compactMobileTray || undefined}>
+    <header
+      className={styles.header}
+      data-compact-tray={compactMobileTray || undefined}
+      data-sidebar={menuOpen ? 'open' : 'closed'}
+    >
       <div className={styles.left}>
         <button
           type="button"

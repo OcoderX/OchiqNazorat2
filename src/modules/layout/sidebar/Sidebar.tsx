@@ -143,19 +143,19 @@ export function Sidebar({ collapsed, layoutTransition = true }: Props) {
         <div className={styles.brandRow}>
           <Link href="/home" className={styles.brandLink}>
             <img
-              src="/images/brand-ochiq-nazorat.png"
+              src="/logo/sidebar_enabled.svg"
               alt="Ochiq nazorat"
               className={styles.brandLogo}
-              width={162}
-              height={28}
+              width={44}
+              height={37}
               decoding="async"
             />
             <img
-              src="/images/white_logo.svg"
+              src="/logo/sidebar_disabled.svg"
               alt="Ochiq nazorat"
               className={styles.brandLogoCollapsed}
-              width={32}
-              height={32}
+              width={44}
+              height={37}
               decoding="async"
             />
           </Link>

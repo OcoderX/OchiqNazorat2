@@ -81,7 +81,7 @@
   grid-template-columns: var(--do-sidebar-w, 280px) minmax(0, 1fr);
   grid-template-rows: var(--do-header-h, 64px) minmax(0, 1fr);
   grid-template-areas:
-    'aside header'
+    'header header'
     'aside workspace';
   min-width: 0;
   min-height: 0;
@@ -90,7 +90,10 @@
 
 /* Panel ochiq: workspace minimal kenglikda qoladi, layout o‘ngga kengayadi */
 .content[data-sidebar='open']:not([data-collapsed]) {
-  grid-template-columns: var(--do-sidebar-w, 280px) minmax(var(--do-workspace-min-width, 886.5px), 1fr);
+  grid-template-columns: var(--do-sidebar-w, 280px) minmax(
+      var(--do-workspace-min-width, 886.5px),
+      1fr
+    );
   width: max(100%, calc(var(--do-sidebar-w, 280px) + var(--do-workspace-min-width, 886.5px)));
   min-width: calc(var(--do-sidebar-w, 280px) + var(--do-workspace-min-width, 886.5px));
 }
@@ -194,7 +197,7 @@
     grid-template-columns: 0fr minmax(0, 1fr);
     grid-template-rows: var(--do-header-row-h) minmax(0, 1fr);
     grid-template-areas:
-      'aside header'
+      'header header'
       'aside workspace';
     transition: grid-template-columns 0.65s cubic-bezier(0.14, 1, 0.28, 1);
   }
@@ -204,12 +207,18 @@
    * Drawer ~70vw gacha: o‘ngdagi header uchun minimal kenglik saqlanadi.
    */
   .content[data-sidebar='open'] {
-    grid-template-columns: minmax(0, min(var(--do-sidebar-w, 280px), 70vw)) minmax(var(--do-workspace-min-width, 886.5px), 1fr);
+    grid-template-columns: minmax(0, min(var(--do-sidebar-w, 280px), 70vw)) minmax(
+        var(--do-workspace-min-width, 886.5px),
+        1fr
+      );
     grid-template-rows: var(--do-header-row-h) minmax(0, 1fr);
     grid-template-areas:
-      'aside header'
+      'header header'
       'aside workspace';
-    width: max(100%, calc(min(var(--do-sidebar-w, 280px), 70vw) + var(--do-workspace-min-width, 886.5px)));
+    width: max(
+      100%,
+      calc(min(var(--do-sidebar-w, 280px), 70vw) + var(--do-workspace-min-width, 886.5px))
+    );
     min-width: calc(min(var(--do-sidebar-w, 280px), 70vw) + var(--do-workspace-min-width, 886.5px));
   }
 

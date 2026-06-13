@@ -1,6 +1,6 @@
 'use client'
 
-import { Calendar, ChevronDown, ExternalLink, FileText } from 'lucide-react'
+import { Calendar, ChevronDown, ExternalLink, FileText, Coins } from 'lucide-react'
 import { useLayoutEffect, useRef, useState } from 'react'
 import { Cell, Pie, PieChart, ResponsiveContainer } from 'recharts'
 import { DASHBOARD_CARDS } from './dashboard-mode'
@@ -155,9 +155,8 @@ function StatIcons({
       </span>
       <span className={numClass}>{docs}</span>
       {separator && <span className={r.separator}>/</span>}
-      <span className={cx(r.moneyIconSm, iconClass)} aria-hidden="true">
-        <span />
-        <span />
+      <span className={cx(r.iconSm, iconClass)}>
+        <Coins size={iconSize} strokeWidth={2.5} />
       </span>
       <span className={numClass}>{amount}</span>
     </span>
@@ -189,7 +188,10 @@ export function RevenueStatusCard() {
         const summaryRow = wrap.nextElementSibling
         const summaryHeight =
           summaryRow instanceof HTMLElement ? summaryRow.getBoundingClientRect().height : 0
-        const gap = Number.parseFloat(getComputedStyle(section).rowGap || getComputedStyle(section).gap || '8') || 8
+        const gap =
+          Number.parseFloat(
+            getComputedStyle(section).rowGap || getComputedStyle(section).gap || '8',
+          ) || 8
         availableHeight = Math.max(0, sectionHeight - summaryHeight - gap)
       }
 
@@ -223,7 +225,11 @@ export function RevenueStatusCard() {
               <ChevronDown size={16} />
             </button>
           </div>
-          <button type="button" className={cx(shared.iconBtn, over.headerIconBtn)} aria-label="Экспорт">
+          <button
+            type="button"
+            className={cx(shared.iconBtn, over.headerIconBtn)}
+            aria-label="Экспорт"
+          >
             <ExternalLink size={18} />
           </button>
         </div>
@@ -231,7 +237,12 @@ export function RevenueStatusCard() {
 
       <div className={cx(tabs.tabsRow, r.tabsRow)}>
         <div className={cx(tabs.tabsGroup, r.tabsGroup)} role="tablist" aria-label="Давр">
-          <button type="button" role="tab" aria-selected={true} className={cx(tabs.tab, tabs.tabActive, r.tab)}>
+          <button
+            type="button"
+            role="tab"
+            aria-selected={true}
+            className={cx(tabs.tab, tabs.tabActive, r.tab)}
+          >
             Йиллик
           </button>
           <button type="button" role="tab" aria-selected={false} className={cx(tabs.tab, r.tab)}>
@@ -310,9 +321,8 @@ export function RevenueStatusCard() {
                   <span className={r.gaugeRowValue}>{EXPECTED.docs}</span>
                 </div>
                 <div className={cx(r.gaugeRow, r.gaugeRowAmount)}>
-                  <span className={r.moneyIcon} aria-hidden="true">
-                    <span />
-                    <span />
+                  <span className={r.iconBlue}>
+                    <Coins size={12} strokeWidth={2.5} />
                   </span>
                   <span className={r.gaugeRowValue}>{EXPECTED.amount}</span>
                 </div>
@@ -326,7 +336,13 @@ export function RevenueStatusCard() {
               <span className={cx(r.accentBar, r.accentGreen)} aria-hidden="true" />
               <div className={r.summaryBody}>
                 <div className={r.summaryStats}>
-                  <StatIcons variant="green" docs={SUMMARY.docs} amount={SUMMARY.amount} separator summary />
+                  <StatIcons
+                    variant="green"
+                    docs={SUMMARY.docs}
+                    amount={SUMMARY.amount}
+                    separator
+                    summary
+                  />
                   <span className={r.pillGreen}>{SUMMARY.percent}</span>
                 </div>
                 <div className={r.summaryLabel}>Амалда</div>
@@ -336,7 +352,13 @@ export function RevenueStatusCard() {
               <span className={cx(r.accentBar, r.accentRed)} aria-hidden="true" />
               <div className={r.summaryBody}>
                 <div className={r.summaryStats}>
-                  <StatIcons variant="red" docs={SUMMARY.docs} amount={SUMMARY.amount} separator summary />
+                  <StatIcons
+                    variant="red"
+                    docs={SUMMARY.docs}
+                    amount={SUMMARY.amount}
+                    separator
+                    summary
+                  />
                   <span className={r.pillRed}>{SUMMARY.percent}</span>
                 </div>
                 <div className={r.summaryLabel}>Қолдиқ</div>
